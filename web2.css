@@ -1,0 +1,344 @@
+
+/* Personal Portfolio Website */
+/* First Year B.Tech CSE Project */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7ff;
+    color: #222;
+}
+
+/* Navigation Bar */
+
+header {
+    background: linear-gradient(90deg, #142850, #274690);
+    color: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    color: #ffd166;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd166;
+}
+
+/* Home Section */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+    animation: slideIn 1s ease;
+}
+
+.welcome {
+    color: #274690;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #142850;
+}
+
+.hero h1 span {
+    color: #7251b5;
+}
+
+.hero h2 {
+    color: #274690;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #274690, #7251b5);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #142850;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px #27469055;
+}
+
+/* Profile Icon */
+
+.profile {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #274690, #a78bfa);
+    border: 6px solid white;
+    box-shadow: 0 10px 30px #27469044;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 85px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Common Sections */
+
+section {
+    padding: 65px 10%;
+    scroll-margin-top: 85px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    color: #142850;
+    margin-bottom: 35px;
+}
+
+.heading span {
+    color: #7251b5;
+}
+
+/* Information Cards */
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #14285012;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #27469022;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #274690;
+    margin: 20px 0 10px;
+}
+
+/* Technical Skills */
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #14285012;
+}
+
+.skill {
+    font-weight: bold;
+    color: #142850;
+}
+
+.skill b {
+    float: right;
+    color: #7251b5;
+}
+
+.bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg, #274690, #a78bfa);
+    border-radius: 10px;
+    animation: grow 1.5s ease;
+}
+
+/* Projects */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-bottom: 4px solid #7251b5;
+    box-shadow: 0 5px 20px #14285012;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    background: #f0edff;
+    border-bottom-color: #274690;
+}
+
+.project h3 {
+    color: #274690;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Resume and Contact */
+
+#resume .card,
+#contact .card {
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background: #142850;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+
+/* Animations */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        width: 0;
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .skill-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+}
+
+/* Reduce animation when requested */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
