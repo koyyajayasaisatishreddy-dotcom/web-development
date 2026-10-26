@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f2;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #216b45;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffe082;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(120deg, #216b45, #78b77b);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    margin-bottom: 25px;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #216b45;
+    margin-bottom: 25px;
+}
+
+/* Responsive Cards */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card,
+.recipe-card {
+    background: white;
+    width: 260px;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #ddd;
+    transition: transform 0.3s;
+}
+
+.card:hover,
+.recipe-card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3,
+.recipe-card h3 {
+    color: #216b45;
+    margin-bottom: 12px;
+}
+
+.card p,
+.recipe-card p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Recipe Image Area */
+.food-image {
+    background-color: #e5f3df;
+    font-size: 55px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #ffe082;
+    color: #244b32;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #216b45;
+}
+
+/* Healthy Tips */
+.tips-box {
+    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+    text-align: left;
+}
+
+.tips-box p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #216b45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .banner h1 {
+        font-size: 28px;
+    }
+
+    .card,
+    .recipe-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
