@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #101a30;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 0 15px #00e5ff33;
+}
+
+.logo {
+    color: #00e5ff;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00e5ff;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 80px 10%;
+    scroll-margin-top: 80px;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: radial-gradient(circle at top right,
+                #123b54, #0b1120 55%);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 260px;
+    animation: slideIn 1s ease;
+}
+
+.welcome {
+    color: #00e5ff;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 55px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span,
+.heading span {
+    color: #00e5ff;
+}
+
+.hero h2 {
+    color: #b8c7dc;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #00e5ff;
+    color: #07111f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #00e5ff88;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    min-width: 220px;
+}
+
+.circle {
+    width: 240px;
+    height: 240px;
+    border: 4px solid #00e5ff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 100px;
+    background: #14253c;
+    box-shadow: 0 0 40px #00e5ff55;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heading {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+.card, .project, .skill-container {
+    background: #121e33;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #243852;
+    transition: 0.3s;
+}
+
+.card:hover, .project:hover {
+    border-color: #00e5ff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px #00e5ff15;
+}
+
+.card p {
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #00e5ff;
+    margin: 20px 0 10px;
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.skill {
+    color: white;
+    font-weight: bold;
+}
+
+.skill b {
+    float: right;
+    color: #00e5ff;
+}
+
+.bar {
+    height: 10px;
+    margin-top: 12px;
+    background: #29364c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #7c4dff);
+    border-radius: 10px;
+    animation: grow 1.5s ease;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.project h3 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.project p {
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #101a30;
+    color: #b8c7dc;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow {
+    from { width: 0; }
+}
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skill-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
